@@ -371,16 +371,6 @@
             "ControlBalon": 72,
             "PaseCorto": 68,
             "Club": "Real Madrid"
-        },
-        {
-            "nombre": "ROdrigo",
-            "posicion": "EI",
-            "edad": 15,
-            "overall": 50,
-            "potencial": 50,
-            "ritmo": 50,
-            "pase": 50,
-            "regate": 50
         }
     ],
     "objetivos_mercado": [
