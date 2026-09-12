@@ -53,7 +53,7 @@ with tab_guardar:
             movimientoHabilidad = st.number_input("Movimiento de habilidad del jugador", min_value=0.0, max_value=5.0, value=2.5, step=0.1)
 
             tiro = st.number_input("Tiro del jugador", min_value=1, max_value=100, value=50, step=1)
-            posicion = st.selectbox("Posición del jugador", ["POR", "DFC", "LD", "LI", "MCD", "MC", "MCO", "ED", "EI", "DC"])
+            posicionTiro = st.selectbox("Posición de tiro del jugador", ["POR", "DFC", "LD", "LI", "MCD", "MC", "MCO", "ED", "EI", "DC"])
             definicion = st.number_input("Definición del jugador", min_value=1, max_value=100, value=50, step=1)
             fuerzaTiro = st.number_input("Fuerza de tiro del jugador", min_value=1, max_value=100, value=50, step=1)
             tirosLargos = st.number_input("Tiros largos del jugador", min_value=1, max_value=100, value=50, step=1)
