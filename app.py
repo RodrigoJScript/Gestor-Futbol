@@ -33,11 +33,11 @@ with tab_guardar:
             nombre = st.text_input("Nombre del jugador")
             pie = st.selectbox("Pie del jugador", ["Izquierdo", "Derecho"])
             pieDebil = st.number_input("Pie débil del jugador", min_value=0.0, max_value=5.0, value=2.5, step=0.1)
-
+            st.empty()
             ritmo = st.number_input("Ritmo del jugador", min_value=1, max_value=100, value=50, step=1)
             aceleracion = st.number_input("Aceleración del jugador", min_value=1, max_value=100, value=50, step=1)
             velocidad = st.number_input("Velocidad del jugador", min_value=1, max_value=100, value=50, step=1)
-            
+            st.empty()
             regate = st.number_input("Regate del jugador", min_value=1, max_value=100, value=50, step=1)
             agilidad = st.number_input("Agilidad del jugador", min_value=1, max_value=100, value=50, step=1)
             equilibrio = st.number_input("Equilibrio del jugador", min_value=1, max_value=100, value=50, step=1)
@@ -51,15 +51,15 @@ with tab_guardar:
             overall = st.number_input("Overall del jugador", min_value=1, max_value=100, value=50, step=1)
             posicion = st.selectbox("Posición del jugador", ["POR", "DFC", "LD", "LI", "MCD", "MC", "MCO", "ED", "EI", "DC"])
             movimientoHabilidad = st.number_input("Movimiento de habilidad del jugador", min_value=0.0, max_value=5.0, value=2.5, step=0.1)
-
+            st.empty()
             tiro = st.number_input("Tiro del jugador", min_value=1, max_value=100, value=50, step=1)
-            posicionTiro = st.selectbox("Posición de tiro del jugador", ["POR", "DFC", "LD", "LI", "MCD", "MC", "MCO", "ED", "EI", "DC"])
+            posicionTiro = st.selectbox("Posición de tiro del jugador", min_value=1, max_value=100, value=50, step=1)
             definicion = st.number_input("Definición del jugador", min_value=1, max_value=100, value=50, step=1)
             fuerzaTiro = st.number_input("Fuerza de tiro del jugador", min_value=1, max_value=100, value=50, step=1)
             tirosLargos = st.number_input("Tiros largos del jugador", min_value=1, max_value=100, value=50, step=1)
             voleas = st.number_input("Voleas del jugador", min_value=1, max_value=100, value=50, step=1)
             penales = st.number_input("Penales del jugador", min_value=1, max_value=100, value=50, step=1)
-            
+            st.empty()
             defensa = st.number_input("Defensa del jugador", min_value=1, max_value=100, value=50, step=1)
             intercepciones = st.number_input("Intercepciones del jugador", min_value=1, max_value=100, value=50, step=1)
             precisionCabeceo = st.number_input("Precisión de cabeceo del jugador", min_value=1, max_value=100, value=50, step=1)
@@ -72,7 +72,7 @@ with tab_guardar:
             edad = st.number_input("Edad del jugador", min_value=15, max_value=50, value=15, step=1)
             potencial = st.number_input("Potencial del jugador", min_value=1, max_value=100, value=50, step=1)
             posicionesAlternativas = st.multiselect("Posiciones alternativas del jugador", ["POR", "DFC", "LD", "LI", "MCD", "MC", "MCO", "ED", "EI", "DC"])
-
+            st.empty()
             pase = st.number_input("Pase del jugador", min_value=1, max_value=100, value=50, step=1)
             vision = st.number_input("Vision del jugador", min_value=1, max_value=100, value=50, step=1)
             centro = st.number_input("Centro del jugador", min_value=1, max_value=100, value=50, step=1)
@@ -80,7 +80,7 @@ with tab_guardar:
             pasesCortos = st.number_input("Pases cortos del jugador", min_value=1, max_value=100, value=50, step=1)
             pasesLargos = st.number_input("Pases largos del jugador", min_value=1, max_value=100, value=50, step=1)
             efecto = st.number_input("Efecto del jugador", min_value=1, max_value=100, value=50, step=1)
-
+            st.empty()
             fisico = st.number_input("Fisico del jugador", min_value=1, max_value=100, value=50, step=1)
             salto = st.number_input("Salto del jugador", min_value=1, max_value=100, value=50, step=1)
             energia = st.number_input("Energía del jugador", min_value=1, max_value=100, value=50, step=1)
