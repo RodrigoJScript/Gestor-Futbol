@@ -21,7 +21,10 @@ tab_ver, tab_guardar = st.tabs(["Ver jugadores", "Guardar jugador"])
 
 with tab_ver:
     if datos and 'jugadores' in datos:
-        st.dataframe(datos['jugadores'])
+        if len(datos['jugadores']) > 0:
+            st.dataframe(datos['jugadores'])
+        else:
+            st.write("No hay jugadores registrados")
     else:
         st.write("No hay jugadores registrados")
 
@@ -33,13 +36,13 @@ with tab_guardar:
         with g1:
             nombre = st.text_input("Nombre del jugador")
             pie = st.selectbox("Pie del jugador", ["Izquierdo", "Derecho"])
-            pieDebil = st.number_input("Pie débil del jugador", min_value=0.0, max_value=5.0, value=2.5, step=0.1)
+            pieDebil = st.selectbox("Pie débil del jugador", [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0])
             playStyles = st.selectbox("Play styles del jugador", ["Pase Largo"])
 
         with g2:
             overall = st.number_input("Overall del jugador", min_value=1, max_value=100, value=50, step=1)
             posicion = st.selectbox("Posición del jugador", ["POR", "DFC", "LD", "LI", "MCD", "MC", "MCO", "ED", "EI", "DC"])
-            movimientoHabilidad = st.number_input("Movimiento de habilidad del jugador", min_value=0.0, max_value=5.0, value=2.5, step=0.1)
+            movimientoHabilidad = st.selectbox("Movimiento de habilidad del jugador", [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0])
 
         with g3:
             edad = st.number_input("Edad del jugador", min_value=15, max_value=50, value=15, step=1)
