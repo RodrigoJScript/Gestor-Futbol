@@ -20,7 +20,10 @@ st.subheader("Por favor, ingrese sus datos")
 tab_ver, tab_guardar = st.tabs(["Ver jugadores", "Guardar jugador"])
 
 with tab_ver:
-    st.dataframe(datos['jugadores'])
+    if datos and 'jugadores' in datos:
+        st.dataframe(datos['jugadores'])
+    else:
+        st.write("No hay jugadores registrados")
 
 with tab_guardar:
     with st.form("inscripcion_form", clear_on_submit=True):
@@ -45,12 +48,14 @@ with tab_guardar:
 
         if guardar:
             if nombre and posicion and edad:
+                crecimiento = potencial - overall
                 datos['jugadores'].append({
                     "Jugador": nombre,
                     "Posicion": posicion,
                     "Edad": edad,
                     "Overall": overall,
                     "Potencial": potencial,
+                    "Crecimiento": crecimiento,
                     "Ritmo": ritmo,
                     "Pase": pase,
                     "Regate": regate,
