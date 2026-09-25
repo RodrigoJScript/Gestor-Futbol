@@ -17,7 +17,7 @@ st.set_page_config(page_title="Formulario de Inscripción", page_icon=":tada:", 
 st.title("Formulario de Inscripción")
 st.subheader("Por favor, ingrese sus datos")
 
-tab_ver, tab_guardar = st.tabs(["Ver jugadores", "Guardar jugador"])
+tab_ver, tab_guardar, tab_metricas = st.tabs(["Ver jugadores", "Guardar jugador", "Metricas"])
 
 with tab_ver:
     if datos and 'jugadores' in datos:
@@ -167,3 +167,11 @@ with tab_guardar:
                 st.write(datos['jugadores'])
             else:
                 st.error("Por favor, complete todos los campos")
+
+with tab_metricas:
+    st.subheader("Metricas")
+    st.write("Numero de jugadores: ", len(datos['jugadores']))
+    st.write("Promedio de overall: ", sum(jugador['overall'] for jugador in datos['jugadores']) / len(datos['jugadores']))
+    st.write("Edad promedio: ", sum(jugador['edad'] for jugador in datos['jugadores']) / len(datos['jugadores']))
+    st.write("Jugador con mejor proyeccion: ", max(jugador['crecimiento'] for jugador in datos['jugadores']))
+    
